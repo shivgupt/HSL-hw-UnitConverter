@@ -8,7 +8,7 @@
 =/  units  ?(%f %c %lb %kg)
 |=  [n=@rs u=units]
 ^-  [a=@rs u=units]
-?+  u  [.0 u]
+?-  u
     :: default return 0 and unit input
 
     %f  [(f-to-c n) %c]
@@ -20,6 +20,7 @@
     %kg  [(lb-to-kg n) %lb]
     :: If input unit is %lb, convert lb to kg 
 
-    %lb  [(lb-to-kg n) %kg]
+    %lb  [(kg-to-lb n) %kg]
     :: If input unit is %kg, convert kg to lb 
+
 ==
